@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basmala Mostafa | UI/UX Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-deep: #0a0516; 
+            --accent-purple: #9b59b6; 
+            --glow-purple: rgba(155, 89, 182, 0.4);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --text-gray: #b2bec3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; }
+
+        body { background-color: var(--bg-deep); color: white; line-height: 1.7; overflow-x: hidden; }
+
+        section { padding: 80px 10%; }
+        h2 { font-size: 2.5rem; margin-bottom: 40px; text-align: center; color: var(--accent-purple); text-shadow: 0 0 15px var(--glow-purple); }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.4s ease;
+            height: 100%;
+        }
+
+        .glass-card:hover { border-color: var(--accent-purple); box-shadow: 0 0 30px var(--glow-purple); transform: translateY(-8px); }
+
+        /* --- Hero --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a0b2e 0%, var(--bg-deep) 70%);
+        }
+        .hero h1 { font-size: clamp(2.5rem, 10vw, 5rem); background: linear-gradient(to right, #fff, var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        .hero p { font-size: clamp(1rem, 4vw, 1.5rem); color: var(--text-gray); letter-spacing: 3px; text-transform: uppercase; }
+
+        /* --- Grid Layouts --- */
+        .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .skill-card { padding: 25px; text-align: center; font-weight: bold; }
+        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .project-card img { width: 100%; border-radius: 12px; margin-bottom: 15px; }
+
+        /* --- Experience Image --- */
+        .exp-img-container { width: 100%; margin-top: 20px; text-align: center; }
+        .exp-img-container img { width: 100%; max-width: 500px; border-radius: 15px; border: 1px solid var(--accent-purple); }
+
+        /* --- Testimonials Link --- */
+        .shrouq-link { color: var(--accent-purple); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; transition: 0.3s; }
+        .shrouq-link:hover { color: white; text-shadow: 0 0 10px var(--accent-purple); }
+.Nada-link { color: var(--accent-purple); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; transition: 0.3s; }
+        .Nada-link:hover { color: white; text-shadow: 0 0 10px var(--accent-purple); }
+
+        /* --- Contact Social --- */
+        .contact-box { max-width: 600px; margin: 0 auto; text-align: center; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; outline: none; }
+        .btn { width: 100%; background: var(--accent-purple); color: white; padding: 15px; border: none; border-radius: 10px; cursor: pointer; font-size: 1.1rem; font-weight: bold; }
+        .social-icon { font-size: 2rem; color: white; margin-top: 20px; display: inline-block; transition: 0.3s; }
+        .social-icon:hover { color: var(--accent-purple); transform: scale(1.1); }
+
+        footer { text-align: center; padding: 60px 20px; font-size: 1.8rem; color: var(--accent-purple); font-weight: bold; }
+
+        @media (max-width: 992px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } .projects-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1 data-aos="zoom-in">Basmala Mostafa</h1>
+        <p data-aos="fade-up" data-aos-delay="300">UI/UX Designer</p>
+    </section>
+
+    <section id="about" style="text-align: center;">
+        <h2 data-aos="fade-down">About Me</h2>
+        <div data-aos="fade-up" style="max-width: 900px; margin: 0 auto; font-size: 1.2rem;">
+            <p>I am a Product-oriented UI/UX Designer focused on creating user-centered interfaces and scalable design systems. I extend my work into web design, translating product and business requirements into structured user flows, reusable components, and development-ready experiences.</p>
+            <br>
+            <p>I value analytical thinking, which helps me understand user problems and break them down into clear design decisions and structured solutions.</p>
+            <br>
+            <p>I also rely on clear communication to collaborate with teams, translate ideas into actionable design steps, and ensure that design decisions align with both user needs and product goals.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-aos="fade-right">Education</h2>
+        <div class="glass-card" data-aos="fade-left">
+            <h3>Beni-Suef Technological University</h3>
+            <p>Bachelor’s Degree | 2024 – 2027</p>
+            <hr style="margin: 20px 0; opacity: 0.1;">
+            <h3>National Telecommunication Institute (NTI)</h3>
+            <p>Web Design Training (120 Hours Intensive Training)</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Learned the fundamentals of HTML, CSS, and JS.</li>
+                <li>Built responsive web layouts and structured web interfaces.</li>
+                <li>Developed an understanding of how UI design connects with real web implementation.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-aos="fade-up">Experience</h2>
+        <div class="glass-card" data-aos="zoom-in">
+            <h3>UI/UX Design Scholarship | NTI</h3>
+            <p>Duration: 1 Month (120 Hours)</p>
+            <ul style="margin-left: 20px; margin-top: 15px; color: var(--text-gray);">
+                <li>Participated in an intensive training program, gaining hands-on experience in user research, wireframing, and prototyping.</li>
+                <li>Collaborated with a team to design a Travel App, creating user flows and high-fidelity UI screens.</li>
+                <li>Applied design thinking and system-based approach to ensure the app was user-centered.</li>
+                <li>Strengthened skills in team collaboration and problem-solving in a real project environment.</li>
+            </ul>
+            <div class="exp-img-container" data-aos="fade-up">
+                <img src="./WhatsApp Image 2026-03-12 at 4.49.58 AM.jpeg" alt="Work Experience Documentation">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-aos="fade-up">Skills</h2>
+        <div class="skills-grid">
+            <div class="glass-card skill-card" data-aos="flip-left">User Research & Analysis</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="100">Wireframing & Prototyping</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="200">User Experience</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="300">Design Systems & Components</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="400">User Flows & User Persona</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="500">Web Design</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="600">UI Implementation</div>
+            <div class="glass-card skill-card" data-aos="flip-left" data-aos-delay="700">Analytical Thinking & Problem Solving</div>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-aos="fade-up">Offered Services</h2>
+        <div class="about-content" data-aos="fade-up" style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <p>I create modern and attractive UI designs for apps and websites that reflect your brand identity. I build structured user flows and responsive web layouts, ensuring the design works smoothly across devices. I deliver well-organized, developer-ready design files for efficient implementation.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 data-aos="fade-up">Projects</h2>
+        <div class="projects-grid">
+            <div class="glass-card project-card" data-aos="fade-up">
+                <img src="./WhatsApp Image 2026-03-12 at 3.21.46 AM.jpeg" alt="Travel App">
+                <h3>Travel App - UI/UX Design</h3>
+                <p>Designed to simplify the travel planning experience.</p>
+            </div>
+            <div class="glass-card project-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="./WhatsApp Image 2026-03-12 at 2.46.22 AM.jpeg" alt="Cake Store">
+                <h3>E-commerce Cake store-Web Design</h3>
+                <p>Responsive Web Design with clear product pages and simple checkout.</p>
+            </div>
+            <div class="glass-card project-card" data-aos="fade-up">
+                <img src="./WhatsApp Image 2026-03-12 at 2.46.23 AM (1).jpeg" alt="Courses System">
+                <h3>Courses Booking System-Web Design</h3>
+                <p>Help university students discover and book available courses easily.</p>
+            </div>
+            <div class="glass-card project-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="./WhatsApp Image 2026-03-12 at 2.46.23 AM (2).jpeg" alt="SIS Payment">
+                <h3>SIS+Payment - UI/UX Design</h3>
+                <p>Making it easier for students to access services and online payment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-aos="zoom-in">Testimonials</h2>
+        <div class="glass-card" style="text-align: center; max-width: 700px; margin: 0 auto;" data-aos="fade-up">
+            <p style="font-style: italic;">"A creative UI/UX designer with a strong sense of color harmony and attention to detail. Her designs are thoughtful, visually balanced, and full of innovative ideas."</p>
+            <a href="#" target="_blank" class="shrouq-link">
+                - Shrouq <i class="fab fa-linkedin"></i>
+            </a>
+              <p style="font-style: italic;">"“Her UI/UX work is impressive. The designs are visually comfortable, easy to use, and show a strong understanding of both user experience and interface design."</p>
+            <a href="#" target="_blank" class="Nada-link">
+                - Nada <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+          
+          
+        
+    </section>
+
+    <section class="contact-box">
+        <h2 data-aos="fade-up">Contact Me</h2>
+        <form id="contactForm" data-aos="fade-up">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+            <div id="formStatus" style="margin-top: 10px;"></div>
+        </form>
+        <a href="https://www.linkedin.com/in/basmala-mostafa8" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </section>
+
+    <footer data-aos="zoom-out">
+        Thank You So Much! 💜
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: false, mirror: true });
+
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("formStatus");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            status.innerHTML = "Sending...";
+            status.style.color = "var(--accent-purple)";
+            setTimeout(() => {
+                status.innerHTML = "💌 Message Sent Successfully!";
+                status.style.color = "#2ecc71";
+                form.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
